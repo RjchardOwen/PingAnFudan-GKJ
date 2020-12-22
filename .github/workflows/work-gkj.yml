@@ -18,7 +18,7 @@ jobs:
       - name: Prepare environment
         run: pip install beautifulsoup4 lxml requests
       - name: Run app
-        run: python fudanDaily.py
+        run: python fudanDaily-gkj.py
         env:
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
