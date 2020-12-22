@@ -1,6 +1,6 @@
 name: Fudan Daily
 
-##on:
+on:
   ##schedule:
    ## - cron: '01 16 * * *'
 
