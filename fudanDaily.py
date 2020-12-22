@@ -6,9 +6,9 @@ import hashlib
 import requests
 from bs4 import BeautifulSoup
 
-USERNAME = "15301050147"
-PASSWORD = "Sourio97.cn"
-PUSH_KEY = "SCU136614T9be9a768149c1ad0accebc85fe4fef3b5fdb83a10caef"
+USERNAME = os.getenv("USERNAME")
+PASSWORD = os.getenv("PASSWORD")
+PUSH_KEY = os.getenv("PUSH_KEY")
 
 fudan_daily_url = "https://zlapp.fudan.edu.cn/site/ncov/fudanDaily"
 login_url = "https://uis.fudan.edu.cn/authserver/login?service=https%3A%2F%2Fzlapp.fudan.edu.cn%2Fa_fudanzlapp%2Fapi%2Fsso%2Findex%3Fredirect%3Dhttps%253A%252F%252Fzlapp.fudan.edu.cn%252Fsite%252Fncov%252FfudanDaily%26from%3Dwap"
