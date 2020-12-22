@@ -87,16 +87,16 @@ def notify(_status, _message):
         "desp": _message
     }
     if _status:
-        _d["text"] = "打卡成功"
+        _d["text"] = "GKJ-打卡成功"
     else:
-        _d["text"] = "打卡失败，请手动打卡"
+        _d["text"] = "GKJ-打卡失败，请手动打卡"
 
     requests.post(f"https://sc.ftqq.com/{PUSH_KEY}.send", data=_d)
 
 
 if __name__ == "__main__":
     if not USERNAME or not PASSWORD:
-        notify(False, "请正确配置用户名和密码！")
+        notify(False, "GKJ-请正确配置用户名和密码！")
         sys.exit()
 
     login_info = {
@@ -116,7 +116,7 @@ if __name__ == "__main__":
         time.sleep(5)
         response = save(session, payload)
 
-        if response.status_code == 200 and response.text == '{"e":0,"m":"操作成功","d":{}}':
+        if response.status_code == 200 and response.text == '{"e":0,"m":"GKJ-操作成功","d":{}}':
             notify(True, payload_str)
         else:
             notify(False, response.text)
