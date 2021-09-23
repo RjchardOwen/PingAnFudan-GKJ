@@ -2,7 +2,7 @@ name: Fudan Daily GKJ
 
 on:
   schedule:
-    - cron: '10 16 * * *'
+    - cron: '00 30 * * *'
 
 jobs:
   build:
