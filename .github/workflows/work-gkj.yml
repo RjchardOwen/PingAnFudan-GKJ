@@ -2,7 +2,7 @@ name: Fudan Daily GKJ
 
 on:
   schedule:
-    - cron: '10 16 * * *'
+    - cron: '12 4 * * *'
 
 jobs:
   build:
@@ -20,6 +20,6 @@ jobs:
       - name: Run app
         run: python fudanDaily-gkj.py
         env:
-          USERNAME: ${{ secrets.USERNAME }}
-          PASSWORD: ${{ secrets.PASSWORD }}
-          PUSH_KEY: ${{ secrets.PUSH_KEY }}
+          DEFAULT_PUSH_KEY: ${{ secrets.DEFAULT_PUSH_KEY }}
+          USER_LIST: ${{ secrets.USER_LIST }}
+          PAFD_RETRY: 3
